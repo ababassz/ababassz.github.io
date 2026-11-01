@@ -230,8 +230,20 @@
   </div>
 
   <script>
+    
     // Replace this with your Google Apps Script Web App URL.
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzmSpIGTB3K7QQ2d-sI3Fv2KGuY4Z-J_4hQraVfAxv4Uy7aq8ctLBn1-WozuopXbZgR/exec";
+
+document.getElementById("startButton").addEventListener("click", function() {
+  document.getElementById("homeScreen").style.display = "none";
+
+  document.getElementById("preferencesForm").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
 
     const questions = [
 
