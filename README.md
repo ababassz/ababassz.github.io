@@ -219,7 +219,7 @@
           "Amusement park 🎡",
           "Museum 🖼️",
           "Bookstore 📚",
-          "Cafe district ☕",
+          "Cafe shop ☕",
           "Mountain or scenic viewpoint 🏞️"
         ]
       },
@@ -230,7 +230,6 @@
         type: "radio",
         options: [
           "Somewhere peaceful and quiet 🌷",
-          "Somewhere lively and exciting 🎉",
           "Somewhere scenic with a beautiful view 🌅",
           "Somewhere cozy and comfortable 🧸"
         ]
@@ -247,13 +246,12 @@
           "A walk along the beach 🌊",
           "Dancing together 💃",
           "A scenic nighttime walk 🌙",
-          "A candlelit dinner 🕯️"
         ]
       },
 
       {
         id: "cozyActivities",
-        title: "♡ Which cozy activities would you enjoy doing together?",
+        title: "♡ Which cozy activities would you wan do? xc",
         type: "checkbox",
         options: [
           "Watching movies or series 🍿",
@@ -268,10 +266,9 @@
 
       {
         id: "creativeDates",
-        title: "♡ Which creative or unique date ideas interest you?",
+        title: "♡ Which creative or unique date u wan xc?",
         type: "checkbox",
         options: [
-          "Painting or drawing together 🎨",
           "Pottery or craft activities 🏺",
           "Taking pictures together 📸",
           "Visiting an art gallery 🖼️",
@@ -282,7 +279,7 @@
 
       {
         id: "qualityTime",
-        title: "♡ What would make a date most memorable for you?",
+        title: "♡ What dit wod u remember mos ouo?",
         type: "radio",
         options: [
           "Having meaningful conversations 💬",
