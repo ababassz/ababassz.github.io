@@ -180,7 +180,7 @@
 
   <script>
     // Replace this with your Google Apps Script Web App URL.
-    const SCRIPT_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL";
+    const SCRIPT_URL = "https://script.google.com/u/0/home/projects/1O5eZ1PswLc2S6hHoSvYLogYSWwQOatFl2TBZf2QDwo442v2tbaRw9Ty6/edit)](https://script.google.com/macros/s/AKfycbxe1B22viWjNWqZYxXkQL73rUYxRT-U9nj_JZUyPmamQeLeX-Za4ghMniq9AXv2TVZ_/exec";
 
     const questions = [
 
