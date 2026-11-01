@@ -169,11 +169,11 @@
 
     <div id="message">
       Thank you for answering! 💜🎀<br><br>
-      Your preferences have been submitted. mwa! 💋
+      Your preferences have been submitted. mwawawawmam! 💋
     </div>
 
     <div class="footer">
-      Made with love for BB ♡
+      Made with love for BB AHHHHHHHHHH O3O ♡
     </div>
 
   </div>
@@ -233,18 +233,6 @@
           "Somewhere lively and exciting 🎉",
           "Somewhere scenic with a beautiful view 🌅",
           "Somewhere cozy and comfortable 🧸"
-        ]
-      },
-
-      {
-        id: "travel",
-        title: "♡ How would you prefer to travel together?",
-        type: "radio",
-        options: [
-          "Walking together 🚶‍♀️",
-          "Car ride 🚗",
-          "Public transportation 🚆",
-          "Motorcycle ride 🛵"
         ]
       },
 
