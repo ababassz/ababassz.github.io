@@ -7,6 +7,43 @@
   <title>BB's Preferences 💜</title>
 
   <style>
+    
+.home-screen {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.home-screen h1 {
+  color: #8b4db5;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home-screen p {
+  color: #80658f;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.home-screen .decorations {
+  font-size: 2rem;
+  margin: 15px;
+}
+
+.start-button {
+  width: 200px;
+  margin-top: 15px;
+}
+
+#preferencesForm {
+  display: none;
+}
+
     * {
       box-sizing: border-box;
     }
@@ -150,12 +187,26 @@
 <body>
   <div class="container">
 
-    <header>
-      <div class="decoration">🎀 💜 💋</div>
-      <h1>BB's Preferences</h1>
-      <p>A little questionnaire to get to know your preferences better ♡</p>
-      <div class="decoration">💕 🌷 💜</div>
-    </header>
+
+<div class="home-screen" id="homeScreen">
+
+  <div class="decorations">🎀 💜 💋</div>
+
+  <h1>Hello! 💜</h1>
+
+  <p>i wan kno wat u wan do dis wek ouo</p>
+
+  <div class="decorations">💕 🌷 ♡</div>
+
+  <button type="button" class="start-button" id="startButton">
+    START ♡
+  </button>
+
+  <p style="font-size: 0.9rem;">
+    made with love for BB 🎀
+  </p>
+
+</div>
 
     <form id="preferencesForm">
 
