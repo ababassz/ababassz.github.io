@@ -4,7 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Date Planner ♡</title>
+
+<title>BB's Preferences ♡</title>
 
 <style>
 * {
@@ -13,29 +14,37 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff5f7;
-    color: #49343c;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #f8f2ff;
+    color: #55416d;
 }
 
 header {
     text-align: center;
-    padding: 45px 15px 30px;
-    background: linear-gradient(135deg, #ffdce7, #fff0f3);
+    padding: 55px 15px 45px;
+    background: linear-gradient(135deg, #d9c1ff, #f3e7ff, #ead7ff);
+    position: relative;
+    overflow: hidden;
 }
 
 header h1 {
-    font-size: 36px;
-    color: #d65c83;
-    margin: 0 0 10px;
+    font-size: 38px;
+    color: #8651b9;
+    margin: 12px 0;
 }
 
 header p {
-    color: #805b69;
+    color: #795b96;
+    line-height: 1.6;
+}
+
+.decor {
+    font-size: 27px;
+    margin: 8px;
 }
 
 .container {
-    max-width: 850px;
+    max-width: 820px;
     margin: 25px auto;
     padding: 15px;
 }
@@ -43,121 +52,129 @@ header p {
 .card {
     background: white;
     padding: 25px;
-    border-radius: 16px;
+    border-radius: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(150, 70, 100, 0.07);
+    box-shadow: 0 5px 20px rgba(120,70,160,0.08);
+    border: 1px solid #eee1ff;
+}
+
+.section-number {
+    color: #a078ce;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
 h2 {
-    color: #d65c83;
-    margin-top: 0;
+    color: #9664c5;
+    margin-top: 10px;
 }
 
 h3 {
-    margin-bottom: 10px;
     font-size: 16px;
+    color: #624b7a;
+    margin-bottom: 13px;
 }
 
 .question {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
+}
+
+.description {
+    font-size: 13px;
+    color: #a18baa;
+    margin-bottom: 16px;
 }
 
 .choices {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 10px;
 }
 
 .choice {
-    display: block;
-    padding: 13px;
-    border: 1px solid #f1d5df;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 14px;
+    border: 1px solid #e8d9fa;
+    border-radius: 12px;
     cursor: pointer;
+    background: #fdfaff;
+    font-size: 14px;
     transition: 0.2s;
-    background: white;
 }
 
 .choice:hover {
-    background: #fff0f5;
-    border-color: #df83a2;
+    background: #f5eaff;
+    transform: translateY(-2px);
 }
 
 .choice:has(input:checked) {
-    background: #ffe5ed;
-    border: 2px solid #dc7194;
-    color: #b83e69;
+    background: #edddff;
+    border: 2px solid #a675d5;
+    color: #7845a8;
 }
 
 .choice input {
-    margin-right: 7px;
-    accent-color: #d65c83;
-}
-
-select {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #edcbd7;
-    border-radius: 9px;
-    background: white;
-    font-size: 15px;
-    color: #49343c;
+    accent-color: #9862c9;
+    cursor: pointer;
 }
 
 button {
     width: 100%;
-    padding: 15px;
+    padding: 16px;
     border: none;
-    border-radius: 10px;
-    background: #d65c83;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #a879d6, #8e5cbd);
     color: white;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
-    background: #bd456d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #d8bdf1;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
 }
 
 .results {
     display: none;
-    background: #fff0f5;
     padding: 20px;
-    border-radius: 12px;
+    background: #f6edff;
+    border-radius: 14px;
     margin-top: 20px;
     line-height: 1.7;
-}
-
-.match {
-    padding: 12px;
-    background: white;
-    border-radius: 9px;
-    margin: 8px 0;
+    text-align: center;
 }
 
 footer {
     text-align: center;
     padding: 30px;
-    color: #a27b89;
+    color: #a68abb;
     font-size: 13px;
 }
 
-.section-label {
-    color: #d65c83;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
+.divider {
+    text-align: center;
+    color: #c5a4e7;
+    margin: 20px;
+    font-size: 20px;
 }
 
 @media(max-width: 500px) {
     header h1 {
-        font-size: 29px;
+        font-size: 30px;
     }
 
     .card {
-        padding: 18px;
+        padding: 19px;
     }
 }
 </style>
@@ -166,353 +183,579 @@ footer {
 <body>
 
 <header>
-    <div style="font-size:35px">♡</div>
-    <h1>Our Date Planner</h1>
-    <p>Let's find the perfect date for us!</p>
-    <p>Two people. One plan. Endless possibilities.</p>
+    <div class="decor">💜 🎀 💋</div>
+    <h1>BB's Preferences</h1>
+    <p>A little questionnaire made especially for you.</p>
+    <p>Let's discover all the things you love! ♡</p>
+    <div class="decor">🧸 💌 ✨</div>
 </header>
 
 <div class="container">
 
-    <div class="card">
-        <div class="section-label">STEP 01</div>
-        <h2>💕 Person A's Preferences</h2>
-        <div id="personA"></div>
-    </div>
+<form id="preferencesForm">
 
-    <div class="card">
-        <div class="section-label">STEP 02</div>
-        <h2>💗 Person B's Preferences</h2>
-        <div id="personB"></div>
-    </div>
+<div id="questionnaire"></div>
 
-    <div class="card">
-        <div class="section-label">STEP 03</div>
-        <h2>✨ Find Our Perfect Date</h2>
-        <p>Compare your answers and discover what you both like!</p>
-        <button onclick="compareAnswers()">Find Our Match ♡</button>
-        <div id="results" class="results"></div>
-    </div>
+<div class="card">
+    <div class="section-number">LAST STEP 💌</div>
+    <h2>That's everything, BB! 💜</h2>
+    <p class="description">
+        Thank you for answering my little questionnaire!
+        Your answers will be saved.
+    </p>
 
+    <button type="submit" id="submitButton">
+        Submit My Preferences 💋
+    </button>
+
+    <div class="results" id="result"></div>
+</div>
+
+</form>
 </div>
 
 <footer>
-    Made with love ♡ Our Date Planner
+    Made with love, just for BB 💜<br>
+    ♡ 🎀 💋 ♡
 </footer>
 
 <script>
 
-// ===================================
+// ======================================
 // EDIT YOUR QUESTIONS AND CHOICES HERE
-// ===================================
+// ======================================
 
 const questions = [
-    {
-        id: "mood",
-        title: "What's your mood?",
-        type: "radio",
-        options: [
-            "💕 Romantic",
-            "🎢 Adventurous",
-            "☁️ Chill and cozy",
-            "✨ Spontaneous",
-            "🎉 Fun and exciting",
-            "🌿 Peaceful and relaxing"
-        ]
-    },
 
-    {
-        id: "budget",
-        title: "What's our budget?",
-        type: "radio",
-        options: [
-            "Free",
-            "₱100 - ₱300",
-            "₱300 - ₱500",
-            "₱500 - ₱1,000",
-            "₱1,000 - ₱2,000",
-            "₱2,000+"
-        ]
-    },
+{
+    section: "01 · PERSONAL VIBES 💜",
+    items: [
+        {
+            id: "mood",
+            title: "What kind of date atmosphere do you prefer?",
+            type: "radio",
+            options: [
+                "💕 Romantic and intimate",
+                "🎀 Cute and sweet",
+                "🌷 Peaceful and relaxing",
+                "🎉 Fun and exciting",
+                "✨ Adventurous and thrilling",
+                "🧸 Cozy and comfortable",
+                "🌙 Quiet and private"
+            ]
+        },
+        {
+            id: "budget",
+            title: "How much would you like to spend on a date?",
+            type: "radio",
+            options: [
+                "💜 Free",
+                "₱100 - ₱300",
+                "₱300 - ₱500",
+                "₱500 - ₱1,000",
+                "₱1,000 - ₱1,500",
+                "₱1,500 - ₱2,000",
+                "₱2,000 - ₱3,000",
+                "₱3,000 and above"
+            ]
+        },
+        {
+            id: "time",
+            title: "What time do you prefer going on dates?",
+            type: "radio",
+            options: [
+                "🌅 6 AM - 9 AM",
+                "☀️ 9 AM - 12 PM",
+                "🌤️ 12 PM - 3 PM",
+                "🌇 3 PM - 6 PM",
+                "🌆 6 PM - 9 PM",
+                "🌙 9 PM - 12 AM"
+            ]
+        },
+        {
+            id: "duration",
+            title: "How long should our date last?",
+            type: "radio",
+            options: [
+                "1 - 2 hours",
+                "3 - 4 hours",
+                "5 - 6 hours",
+                "7 - 9 hours",
+                "10 - 12 hours",
+                "Overnight"
+            ]
+        },
+        {
+            id: "weather",
+            title: "Which weather do you enjoy for a date?",
+            type: "radio",
+            options: [
+                "☀️ Warm and sunny",
+                "☁️ Cool and cloudy",
+                "🌧️ Rainy weather",
+                "🌤️ Breezy afternoon",
+                "🌙 Cool evening"
+            ]
+        }
+    ]
+},
 
-    {
-        id: "place",
-        title: "Where do you want to go?",
-        type: "radio",
-        options: [
-            "🏠 Indoor",
-            "🌳 Outdoor",
-            "🌊 Beach",
-            "🏙️ City",
-            "Anywhere!"
-        ]
-    },
+{
+    section: "02 · PLACES YOU LOVE 📍",
+    items: [
+        {
+            id: "places",
+            title: "Which places would you like to visit?",
+            type: "checkbox",
+            options: [
+                "☕ Cozy coffee shops",
+                "🍽️ Fancy restaurants",
+                "🛍️ Shopping malls",
+                "🌊 Beaches",
+                "🌳 Parks and gardens",
+                "🎢 Amusement parks",
+                "🎮 Arcades",
+                "🎬 Cinemas",
+                "📚 Bookstores",
+                "🖼️ Museums and art galleries",
+                "🏔️ Mountains",
+                "🏙️ City viewpoints",
+                "🏨 Hotels and staycations",
+                "🌸 Flower gardens",
+                "🐠 Aquariums",
+                "🦁 Zoos",
+                "🎳 Bowling alleys",
+                "🎤 Karaoke places",
+                "🛒 Night markets",
+                "🏕️ Camping sites"
+            ]
+        },
+        {
+            id: "transport",
+            title: "How would you prefer traveling to our date?",
+            type: "radio",
+            options: [
+                "🚗 Private car",
+                "🏍️ Motorcycle ride",
+                "🚕 Taxi or Grab",
+                "🚌 Bus ride",
+                "🚆 Train ride",
+                "🚶 Walking together"
+            ]
+        }
+    ]
+},
 
-    {
-        id: "time",
-        title: "What time should we go?",
-        type: "radio",
-        options: [
-            "🌅 Morning",
-            "☀️ Afternoon",
-            "🌇 Evening",
-            "🌙 Late night",
-            "Anytime!"
-        ]
-    },
+{
+    section: "03 · FOOD AND DRINKS 🍓",
+    items: [
+        {
+            id: "food",
+            title: "What food would you love to eat on a date?",
+            type: "checkbox",
+            options: [
+                "🍣 Japanese food",
+                "🍜 Ramen",
+                "🍱 Sushi",
+                "🥩 Samgyupsal",
+                "🍗 Korean fried chicken",
+                "🍲 Korean food",
+                "🍕 Pizza",
+                "🍔 Burgers",
+                "🍟 Fries",
+                "🍝 Pasta",
+                "🥞 Pancakes",
+                "🍰 Cakes",
+                "🍩 Donuts",
+                "🍦 Ice cream",
+                "🧋 Milk tea",
+                "☕ Coffee",
+                "🍫 Chocolate desserts",
+                "🥗 Salads",
+                "🍗 Filipino food",
+                "🍢 Street food",
+                "🥐 Pastries",
+                "🍛 Indian food",
+                "🌮 Mexican food",
+                "🥪 Sandwiches",
+                "🍣 Buffet"
+            ]
+        },
+        {
+            id: "restaurant",
+            title: "What kind of restaurant would you prefer?",
+            type: "radio",
+            options: [
+                "🕯️ Romantic candlelight restaurant",
+                "🌸 Cute aesthetic cafe",
+                "🏮 Korean BBQ restaurant",
+                "🍜 Japanese ramen restaurant",
+                "🍽️ Fine dining restaurant",
+                "🍔 Casual fast food restaurant",
+                "🌃 Rooftop restaurant",
+                "🌊 Beachside restaurant",
+                "🍰 Dessert cafe"
+            ]
+        },
+        {
+            id: "drinks",
+            title: "Which drinks do you enjoy?",
+            type: "checkbox",
+            options: [
+                "🧋 Milk tea",
+                "☕ Iced coffee",
+                "🍵 Matcha",
+                "🍫 Hot chocolate",
+                "🥤 Fruit smoothies",
+                "🍓 Strawberry drinks",
+                "🍋 Lemonade",
+                "🧃 Fruit juices",
+                "🧊 Iced tea",
+                "🥛 Milkshakes"
+            ]
+        }
+    ]
+},
 
-    {
-        id: "weather",
-        title: "What's the weather preference?",
-        type: "radio",
-        options: [
-            "☀️ Sunny",
-            "🌧️ Rainy",
-            "☁️ Cloudy",
-            "❄️ Cold weather",
-            "Doesn't matter!"
-        ]
-    },
+{
+    section: "04 · ROMANTIC ACTIVITIES 🌹",
+    items: [
+        {
+            id: "romantic",
+            title: "Which romantic activities would you enjoy?",
+            type: "checkbox",
+            options: [
+                "🌅 Watching the sunset together",
+                "🌌 Stargazing",
+                "🌷 Receiving flowers",
+                "💌 Exchanging handwritten letters",
+                "📸 Couple photoshoot",
+                "🌊 Beach sunset date",
+                "🕯️ Candlelight dinner",
+                "🌙 Late-night walks",
+                "🌸 Flower picking",
+                "🎀 Matching outfits",
+                "💕 Recreating our first date",
+                "🎡 Ferris wheel ride",
+                "🌃 Watching city lights",
+                "🧺 Romantic picnic",
+                "🎁 Exchanging gifts",
+                "💃 Slow dancing",
+                "🌅 Watching the sunrise",
+                "💗 Making a scrapbook together"
+            ]
+        }
+    ]
+},
 
-    {
-        id: "duration",
-        title: "How long should our date be?",
-        type: "radio",
-        options: [
-            "1-2 hours",
-            "3-4 hours",
-            "Half a day",
-            "Whole day",
-            "Overnight"
-        ]
-    },
+{
+    section: "05 · FUN AND ADVENTURE 🎢",
+    items: [
+        {
+            id: "adventure",
+            title: "Which fun activities would you try?",
+            type: "checkbox",
+            options: [
+                "🎢 Roller coaster rides",
+                "🎮 Arcade games",
+                "🎳 Bowling",
+                "🏎️ Go-kart racing",
+                "🎤 Karaoke",
+                "🛼 Roller skating",
+                "🏊 Swimming",
+                "🥾 Hiking",
+                "🚴 Cycling",
+                "🧗 Indoor climbing",
+                "🧩 Escape rooms",
+                "🎯 Archery",
+                "🏸 Badminton",
+                "🎾 Tennis",
+                "🏕️ Camping",
+                "🚗 Road trips",
+                "🛶 Kayaking",
+                "🏄 Water activities",
+                "🎪 Carnival games"
+            ]
+        }
+    ]
+},
 
-    {
-        id: "activities",
-        title: "What activities would you enjoy?",
-        subtitle: "You can select multiple answers!",
-        type: "checkbox",
-        options: [
-            "Coffee shop date",
-            "Fast food date",
-            "Street food adventure",
-            "Samgyupsal date",
-            "Ramen date",
-            "Pizza date",
-            "Milktea date",
-            "Dessert and cake date",
-            "Fine dining",
-            "Late-night food trip",
-            "Ice cream date",
-            "Picnic with homemade food",
-            "Cooking together",
-            "Buffet date",
-            "Trying a new restaurant",
+{
+    section: "06 · COZY AND INDOOR DATES 🧸",
+    items: [
+        {
+            id: "indoor",
+            title: "Which indoor activities would you enjoy?",
+            type: "checkbox",
+            options: [
+                "🎬 Movie marathon",
+                "🎮 Playing video games",
+                "🍪 Baking cookies together",
+                "🍳 Cooking together",
+                "🎨 Painting together",
+                "🧩 Completing puzzles",
+                "🧸 Building LEGO",
+                "📺 Watching anime",
+                "🎲 Board games",
+                "📖 Reading books",
+                "🎧 Listening to music",
+                "🏠 Indoor picnic",
+                "🛏️ Cozy movie night",
+                "📸 Looking through old pictures",
+                "💅 Doing each other's nails",
+                "🎀 Making bracelets",
+                "🖍️ Coloring together",
+                "🧁 Decorating cupcakes"
+            ]
+        }
+    ]
+},
 
-            "Watching the sunset",
-            "Stargazing",
-            "Candlelight dinner",
-            "Night walk",
-            "Beach date",
-            "Rooftop date",
-            "Watching the sunrise",
-            "Flower shopping",
-            "Couple photoshoot",
-            "Writing love letters",
-            "Recreating our first date",
-            "Watching city lights",
+{
+    section: "07 · CREATIVE AND UNIQUE DATES 🎨",
+    items: [
+        {
+            id: "creative",
+            title: "Which unique experiences would you like?",
+            type: "checkbox",
+            options: [
+                "🏺 Pottery painting",
+                "🖼️ Art workshop",
+                "📷 Photography walk",
+                "🛍️ Thrift shopping",
+                "📚 Bookstore exploration",
+                "🌸 Flower arranging",
+                "🧶 DIY crafts",
+                "🎨 Painting each other's portraits",
+                "💍 Making matching accessories",
+                "📔 Scrapbooking",
+                "🧸 Plushie shopping",
+                "🕯️ Candle making",
+                "🧴 Perfume making",
+                "🍰 Cake decorating",
+                "🎀 Decorating phone cases",
+                "🛒 Shopping challenge"
+            ]
+        }
+    ]
+},
 
-            "Amusement park",
-            "Arcade date",
-            "Bowling",
-            "Go-kart racing",
-            "Billiards",
-            "Karaoke",
-            "Escape room",
-            "Trampoline park",
-            "Hiking",
-            "Cycling",
-            "Swimming",
-            "Roller skating",
-            "Visiting a zoo",
-            "Trying a new sport",
-            "Road trip",
+{
+    section: "08 · SIMPLE AND BUDGET-FRIENDLY DATES 💜",
+    items: [
+        {
+            id: "simple",
+            title: "Which simple dates would you enjoy?",
+            type: "checkbox",
+            options: [
+                "🚶 Walking around the park",
+                "🥤 Convenience store food trip",
+                "🌅 Watching the sunset",
+                "🧋 Buying milk tea together",
+                "🛍️ Window shopping",
+                "🍟 Sharing street food",
+                "🧺 Homemade picnic",
+                "📸 Taking random pictures",
+                "🎮 Playing mobile games",
+                "🌳 Visiting a public garden",
+                "🍳 Cooking a homemade meal",
+                "💬 Deep conversations",
+                "🌙 Evening stroll",
+                "📚 Visiting a public library",
+                "🎵 Listening to music together"
+            ]
+        }
+    ]
+},
 
-            "Movie marathon",
-            "Playing video games",
-            "Board game night",
-            "Baking cookies",
-            "Cooking a new recipe",
-            "Building LEGO",
-            "Painting together",
-            "Doing a puzzle",
-            "Watching anime",
-            "Reading books",
-            "Having a sleepover",
-            "Making a blanket fort",
-            "Listening to music",
-            "DIY project",
+{
+    section: "09 · LITTLE PERSONAL DETAILS 💋",
+    items: [
+        {
+            id: "gifts",
+            title: "What kind of gifts would make you happy?",
+            type: "checkbox",
+            options: [
+                "💐 Flowers",
+                "🧸 Plushies",
+                "💍 Jewelry",
+                "🎀 Accessories",
+                "👜 Bags",
+                "👗 Clothes",
+                "🌸 Perfume",
+                "🍫 Chocolates",
+                "💌 Handwritten letters",
+                "📸 Printed photographs",
+                "🧴 Skincare products",
+                "🎨 Handmade gifts",
+                "🍰 Desserts",
+                "📚 Books"
+            ]
+        },
+        {
+            id: "surprises",
+            title: "Which surprises would you love?",
+            type: "checkbox",
+            options: [
+                "💐 Surprise flower delivery",
+                "🎂 Surprise birthday celebration",
+                "🍽️ Secret dinner reservation",
+                "🎁 Unexpected gifts",
+                "💌 Hidden love letters",
+                "🧺 Surprise picnic",
+                "🎬 Surprise movie date",
+                "🧸 Surprise plushie",
+                "📸 A collection of our pictures",
+                "🌹 A romantic room decoration"
+            ]
+        }
+    ]
+}
 
-            "Pottery painting",
-            "Thrift shopping",
-            "Art gallery",
-            "Museum date",
-            "Making matching bracelets",
-            "Creating a scrapbook",
-            "Taking random photographs",
-            "Painting each other's portraits",
-            "Making a bucket list",
-            "Bookstore date",
-            "Trying perfumes",
-            "Making a time capsule",
-            "Decorating phone cases",
-            "Flower arranging",
-
-            "Walking in the park",
-            "Convenience store food trip",
-            "Window shopping",
-            "Exploring a new neighborhood",
-            "Playing mobile games",
-            "Making homemade coffee",
-            "Visiting a public market",
-            "Watching free events",
-            "Deep-talk night",
-            "Spontaneous walk"
-        ]
-    }
 ];
 
-// ===================================
-// DISPLAY THE QUESTIONS
-// ===================================
+// ======================================
+// GENERATE THE QUESTIONNAIRE
+// ======================================
 
-function createQuestions(person, containerId) {
+const questionnaire = document.getElementById("questionnaire");
 
-    const container = document.getElementById(containerId);
+questions.forEach((section, sectionIndex) => {
 
-    questions.forEach(q => {
+    let html = `
+    <div class="card">
+        <div class="section-number">${section.section}</div>
+    `;
 
-        let html = `
-            <div class="question">
-                <h3>${q.title}</h3>
-                ${q.subtitle ? `<p>${q.subtitle}</p>` : ""}
-                <div class="choices">
+    section.items.forEach(q => {
+
+        html += `
+        <div class="question">
+            <h3>${q.title}</h3>
+            <p class="description">
+                ${q.type === "checkbox"
+                    ? "♡ Select all the ones you like!"
+                    : "♡ Choose your preferred answer."}
+            </p>
+            <div class="choices">
         `;
 
-        q.options.forEach(option => {
+        q.options.forEach((option, index) => {
 
             html += `
-                <label class="choice">
-                    <input
-                        type="${q.type}"
-                        name="${person}_${q.id}"
-                        value="${option}"
-                    >
-                    ${option}
-                </label>
+            <label class="choice">
+                <input
+                    type="${q.type}"
+                    name="${q.id}"
+                    value="${option}"
+                >
+                ${option}
+            </label>
             `;
 
         });
 
         html += `
-                </div>
             </div>
+        </div>
         `;
-
-        container.innerHTML += html;
-
-    });
-}
-
-createQuestions("A", "personA");
-createQuestions("B", "personB");
-
-// ===================================
-// GET SELECTED ANSWERS
-// ===================================
-
-function getAnswers(person) {
-
-    let answers = {};
-
-    questions.forEach(q => {
-
-        const selected = document.querySelectorAll(
-            `input[name="${person}_${q.id}"]:checked`
-        );
-
-        answers[q.id] = Array.from(selected).map(
-            input => input.value
-        );
 
     });
 
-    return answers;
-}
+    html += `</div>`;
 
-// ===================================
-// COMPARE BOTH PEOPLE'S ANSWERS
-// ===================================
+    questionnaire.innerHTML += html;
 
-function compareAnswers() {
+});
 
-    const a = getAnswers("A");
-    const b = getAnswers("B");
+// ======================================
+// GOOGLE SHEETS CONNECTION
+// ======================================
 
-    const results = document.getElementById("results");
+// Paste your Google Apps Script /exec URL here.
+const SCRIPT_URL = "PASTE_YOUR_WEB_APP_URL_HERE";
 
-    let html = `
-        <h2>💕 Your Date Compatibility</h2>
-        <p>Here's what you both have in common!</p>
-    `;
+// ======================================
+// SUBMIT BB'S ANSWERS
+// ======================================
 
-    let totalMatches = 0;
+document.getElementById("preferencesForm")
+.addEventListener("submit", async function(event) {
 
-    questions.forEach(q => {
+    event.preventDefault();
 
-        const common = a[q.id].filter(
-            item => b[q.id].includes(item)
-        );
+    const answers = {};
+    let missing = [];
 
-        if (common.length > 0) {
+    questions.forEach(section => {
 
-            totalMatches++;
+        section.items.forEach(q => {
 
-            html += `
-                <div class="match">
-                    <strong>${q.title}</strong><br>
-                    ${common.join("<br>")}
-                </div>
-            `;
+            const selected = document.querySelectorAll(
+                `input[name="${q.id}"]:checked`
+            );
 
-        }
+            answers[q.id] = Array.from(selected).map(
+                input => input.value
+            );
+
+            if (answers[q.id].length === 0) {
+                missing.push(q.title);
+            }
+
+        });
 
     });
 
-    if (totalMatches === 0) {
+    if (missing.length > 0) {
+        alert("Please answer all questions first, BB! 💜\n\nMissing: " + missing.join(", "));
+        return;
+    }
 
-        html += `
-            <p>You have different preferences!
-            Time to discover something new together. ♡</p>
+    if (SCRIPT_URL === "PASTE_YOUR_WEB_APP_URL_HERE") {
+        alert("The Google Sheets connection has not been configured yet! 💜");
+        return;
+    }
+
+    const button = document.getElementById("submitButton");
+    const result = document.getElementById("result");
+
+    button.disabled = true;
+    button.textContent = "Saving your answers... 💜";
+
+    try {
+
+        await fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify({
+                answers: answers
+            })
+        });
+
+        result.style.display = "block";
+        result.innerHTML = `
+            <h2>Thank you, BB! 💜</h2>
+            <p>Your answers have been sent!</p>
+            <div style="font-size:35px">🎀 💋 🧸</div>
+            <p>Made with love, just for you. ♡</p>
         `;
 
-    } else {
+        button.textContent = "Submitted! 💜";
 
-        html += `
-            <h3>You matched in ${totalMatches} categories!</h3>
-            <p>These are your shared preferences. Pick one and make it happen! ♡</p>
-        `;
+    } catch(error) {
+
+        alert("Something went wrong. Please try again!");
+
+        button.disabled = false;
+        button.textContent = "Submit My Preferences 💋";
 
     }
 
-    results.innerHTML = html;
-    results.style.display = "block";
-
-    results.scrollIntoView({
-        behavior: "smooth"
-    });
-
-}
+});
 
 </script>
 
