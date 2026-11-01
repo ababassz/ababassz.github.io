@@ -71,9 +71,9 @@
 <body>
 
     <div class="container">
-        <h1>Welcome to My Website!</h1>
+        <h1>helaw bib</h1>
 
-        <p>What is your name?</p>
+        <p>do u wab me :d?</p>
 
         <input
             type="text"
