@@ -286,7 +286,99 @@
           "Laughing and having fun together 😂",
           "Trying something new together ✨",
           "Making beautiful memories together 📷",
-          "Simply enjoying each other's company 💕"
+          "#!/bin/bash
+
+# Arrays to store student names and grades
+declare -a names
+declare -a grades
+declare -a highest_students
+declare -a lowest_students
+
+count=0
+
+# Input 10 valid students
+while [ $count -lt 10 ]; do
+    echo ""
+    echo "Student $((count + 1))"
+
+    read -p "Enter student name: " name
+
+    # Validate grade input
+    while true; do
+        read -p "Enter grade (50-100): " grade
+
+        if ! [[ "$grade" =~ ^[0-9]+$ ]]; then
+            echo "Warning: Invalid input! Enter numbers only."
+        elif [ "$grade" -lt 50 ] || [ "$grade" -gt 100 ]; then
+            echo "Warning: Grade must be between 50 and 100."
+        else
+            break
+        fi
+    done
+
+    # Store valid inputs in arrays
+    names[$count]="$name"
+    grades[$count]=$grade
+
+    count=$((count + 1))
+done
+
+# Determine highest and lowest grades
+highest=${grades[0]}
+lowest=${grades[0]}
+
+for ((i = 1; i < 10; i++)); do
+    if [ "${grades[$i]}" -gt "$highest" ]; then
+        highest=${grades[$i]}
+    fi
+
+    if [ "${grades[$i]}" -lt "$lowest" ]; then
+        lowest=${grades[$i]}
+    fi
+done
+
+# Store students with highest and lowest grades
+for ((i = 0; i < 10; i++)); do
+    if [ "${grades[$i]}" -eq "$highest" ]; then
+        highest_students+=("${names[$i]}")
+    fi
+
+    if [ "${grades[$i]}" -eq "$lowest" ]; then
+        lowest_students+=("${names[$i]}")
+    fi
+done
+
+# Write results to a text file
+{
+    echo "===== STUDENT GRADE REPORT ====="
+    echo ""
+    echo "STUDENT NAMES AND GRADES"
+
+    for ((i = 0; i < 10; i++)); do
+        echo "${names[$i]} - ${grades[$i]}"
+    done
+
+    echo ""
+    echo "HIGHEST GRADE: $highest"
+    echo "STUDENT(S) WITH HIGHEST GRADE:"
+
+    for student in "${highest_students[@]}"; do
+        echo "$student"
+    done
+
+    echo ""
+    echo "LOWEST GRADE: $lowest"
+    echo "STUDENT(S) WITH LOWEST GRADE:"
+
+    for student in "${lowest_students[@]}"; do
+        echo "$student"
+    done
+
+} > student_grades_report.txt
+
+echo ""
+echo "Grades processed successfully!"
+echo "Results saved to student_grades_report.txt""
         ]
       }
 
